@@ -1,0 +1,45 @@
+#header-container {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: inherit;
+}
+.btn-auth {
+    height: 46%;
+    background-color: #0054ff;
+    padding: 1px 15px 4px 15px;
+    margin-top: 8px;
+    margin-right: 2px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: small;
+}
+#logo-float-left {
+    margin-left: 8px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+#btns-float-right {
+    margin-right: 6px;
+}
+#text-logo-header {
+    font-family: 'Montez', cursive; 
+    margin-top: 4px;
+    color: blue;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: -6px;
+}
+#lower-text > a{
+    color: black;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: medium; 
+    color: orange;
+}
+#lower-text {
+    margin-left: 10px;
+}

@@ -1,0 +1,50 @@
+:root {
+    --background-color: rgb(6, 11, 25);
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+#posts-ctrl-btns{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 7px;
+    top: 50%;
+    left: 45.99%;
+
+}
+#post-ctrl-btns > button{
+    padding: 9px;
+    background-color: orange;
+    border: 1px solid #7e8b7e;
+    border-radius: 3px;
+}
+.btn-content-driver {
+    padding: 9px;
+    background-color: orange;
+    border: 1px solid #7e8b7e;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 1470px) {
+    #creat-post-container {
+        height: 97%;
+    }
+  }
