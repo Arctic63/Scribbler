@@ -1,0 +1,181 @@
+#main-post-cont {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+#parent-post-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 73px;
+  padding: 15px;
+}
+#name-heading {
+  font-size: larger;
+  color: gray;
+}
+#post-heading {
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid orange;
+  border-top: none;
+  border-right: none;
+  border-bottom-right-radius: 0px;
+  color: #cfcfcf;
+}
+.name-edit-btn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-end;
+}
+.para {
+  padding: 2px 2px 5px 2px;
+  padding-top: 5px;
+  text-align: justify;
+  color: #6a6a6a;
+}
+.post-handler-btn {
+  border: none;
+  margin-bottom: 5px;
+  padding: 4px;
+  border-radius: 3px;
+  width: 45px;
+  color: orange;
+  background: transparent;
+  transition: 0.6s;
+}
+.textarea-container {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5px;
+  width: 100%;
+  margin-top: 4px;
+  margin-left: 0%;
+}
+#textarea-comment {
+  width: 418px;
+  border: 1px solid gray;
+  height: 89px;
+  border-radius: 7px;
+  padding-left: 8px;
+  text-align: justify;
+  padding-right: 10px;
+}
+#post-comment-btn {
+  border: none;
+  width: 86px;
+  height: 38px;
+  color: orange;
+  border-radius: 6px;
+  transition: 0.6s;
+}
+#post-comment-btn:hover,
+.post-handler-btn:hover {
+  box-shadow: 0px 1px 4px #c8c5c5;
+  transition: 0.6s;
+  color: rgba(255, 202, 105, 0.97);
+  background-color: white;
+}
+#textarea-comment::-webkit-scrollbar {
+  display: "";
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#textarea-comment {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#textarea-comment::-webkit-scrollbar,
+#textarea-comment::-webkit-scrollbar-thumb {
+  width: 0px;
+  height: 0px;
+  background-clip: content-box;
+  overflow-y: scroll;
+}
+
+.comment-card {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: flex-start;
+  background: #ffffff;
+  width: 98%;
+  margin-left: 0%;
+  padding-left: 54px;
+  gap: 0rem;
+  padding-top: 2px;
+  height: 23vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.comment-card::-webkit-scrollbar {
+  display: "";
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.comment-card {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.comment-card::-webkit-scrollbar,
+.comment-card::-webkit-scrollbar-thumb {
+  width: 0px;
+  height: 0px;
+  background-clip: content-box;
+  overflow-y: scroll;
+}
+
+#all-comments {
+  width: 96%;
+  margin-left: 60px;
+}
+#all-comments > h6 {
+  margin-left: -60px;
+  margin-bottom: 14px;
+  /* background: orange; */
+  padding: 11px;
+  padding-right: 0px;
+  /* color: white; */
+  border-radius: 10px;
+  margin-top: 20px;
+  border-bottom: 1px solid orange;
+  border-left: 1px solid orange;
+  border-bottom-right-radius: 0px;
+  width: 49%;
+}
+.comment-card > p {
+  width: 44%;
+  height: auto;
+  border-radius: 4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 33px;
+  padding-left: 28px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  box-shadow: 0px 2px 5px 0px #aeabab;
+  transition: 0.6s;
+  padding-right: 30px;
+  text-align: justify;
+}
+.comment-card > p:hover {
+  box-shadow: 0px 1px 5px 0px #d3d3d3;
+  transition: 0.5s;
+}
+.fa-pad {
+  padding-right: 4px;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- TODO: Include Font Awesome file here -->
+  <!-- TODO: Include Google Fonts file here -->
+  <link rel="stylesheet" href="styles\common.css" />
+  <link rel="stylesheet" href="styles\index.css" />
+  <link rel="stylesheet" href="styles\popUpDialogs.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/ca9ad6cd79.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- TODO: Include all your code for the header and home page here -->
+  <img src="images\background.jpg" alt="img" />
+  <nav id="header-container">
+    <div id="logo-float-left" class="nav-child">
+      <h2 id="text-logo-header">Scribbler</h2>
+      <span id="lower-text">
+        <a href="#">Explore |</a>
+        <a href="#">Imagine |</a>
+        <a href="#">Create</a></span>
+    </div>
+
+    <div id="btns-float-right" class="nav-child">
+      <button id="btn-sign-in" class="btn-auth" onclick="signInControl()">
+        Sign In
+      </button>
+      <button id="btn-sign-up" class="btn-auth" onclick="signUpControl()">
+        Sign Up
+      </button>
+    </div>
+  </nav>
+
+  <div id="posts-ctrl-btns">
+    <button id="btn-allPost" class="btn-content-driver"><a href="html\postslist.html"
+        style="text-decoration: none; color: black;">All Posts</a></button>
+    <button id="btn-creatPost" class="btn-content-driver" onclick="creatPost('creat-post-container')">Creat
+      Post</button>
+  </div>
+
+  <div id="parent">
+    <div id="creat-post-container" class="animate">
+      <h4 id="creatPost-heading">
+        Pen your post<span id="icon-span-creat-post" onclick="closePopUp('creat-post-container')"><i
+            class="fa-solid fa-xmark"></i></span>
+      </h4>
+      <hr />
+      <form>
+        <div class="form-group">
+          <label for="exampleInputText1">Title</label>
+          <input type="text" class="form-control" id="exampleInputText1" aria-describedby="titleHelp"
+            placeholder="Write a title for your post" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputContent1">Content</label>
+          <textarea class="form-control" id="exampleInputContent1" placeholder="Write your content">
+            </textarea>
+
+        </div>
+
+        <button class="btn btn-primary" id="post-ctrl-btn"
+          onclick=" fetchDataFrom(event, exampleInputText1, exampleInputContent1)">Post</button>
+        <button class="btn btn-primary" id="post-ctrl-btn-reset">Reset</button>
+
+      </form>
+    </div>
+
+    <div id="sign-in-container" class="container animate">
+      <h4 id="">
+        Welcome Back!<span id="icon-span-si-in" onclick="closePopUp('sign-in-container')"><i
+            class="fa-solid fa-xmark"></i></span>
+      </h4>
+      <hr />
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+        </div>
+        <div class="form-check">
+          <input checked type="checkbox" class="form-check-input" id="exampleCheck1"
+            style="font-size: smaller; margin-top: 8px;" />
+          <label class="form-check-label" for="exampleCheck1" style="font-size: smaller;">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <hr style="width: 125px; display: inline-block;">Or log in with
+        <hr style="width: 124px; display: inline-block;">
+
+        <div id="company-log" style="padding-bottom: 8px;">
+
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <p>
+          <span> Don't have an account? </span>
+          <a href="#" onclick="signUpControl()" class="pointer"> Sign up here </a>
+        </p>
+      </form>
+    </div>
+
+    <div id="sign-up-container" class="container animate">
+      <h4 id="">
+        Join Us<span id="icon-span-si-up" onclick="closePopUp('sign-up-container')"><i
+            class="fa-solid fa-xmark"></i></span>
+      </h4>
+      <hr />
+      <form>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Enter Your Name</label>
+          <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter Name" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Enter a Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Confirm Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password" />
+        </div>
+        <div class="form-check">
+          <input checked type="checkbox" class="form-check-input" id="exampleCheck1"
+            style="font-size: smaller; margin-top: 8px;" />
+          <label class="form-check-label" for="exampleCheck1" style="font-size: smaller;"><a href="#">Accept terms &
+              conditions</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-bottom: 8px;">Register</button>
+        <p id="reg-btn-para">
+
+          <hr style="width: 135px; display: inline-block;">Or sign up with
+          <hr style="width: 135px; display: inline-block;">
+
+        <div id="company-log" style=" padding-bottom: 10px; gap: 1rem;">
+
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <span style="margin-left: 76px;"> Already a member? </span>
+        <a href="#" onclick="signInControl()" class="pointer"> Sign in here</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="script\script.js"></script>
+  <script src="common.js"></script>
+
+
+</body>
+
+</html>
